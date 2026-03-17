@@ -80,3 +80,20 @@ console.log(parseFloat("5.7abc"));*/
 
 //Number()- it will run but our output will be Nan, which in our case it woun't be our prefered output.
 //parseFloat- reads values from left to right, if it hits a non-number value it stops, and prints out, the number read.
+
+/*let number = "5.7abc";
+console.log(parseFloat(number));
+console.log(Number(number))*/
+
+//typeof Operator: Used to show they type of the values.
+
+/*console.log(typeof "Esther");//string
+console.log(typeof 42);//number
+console.log(typeof true);//boolean
+console.log(typeof undefined);//undefined
+console.log(typeof null);//object*/
+
+/*let a;
+let b = null;
+console.log(a)
+console.log(b);*/
