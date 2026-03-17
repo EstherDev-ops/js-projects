@@ -99,4 +99,7 @@ console.log(a)//undefined
 console.log(b);//null
 */
 //in the code above: undefined will be output in the first line of the code, since we haven't assign any value to the variable, so JavaScript automatically passes(assigns) the undefined value to the variable.
-//null will be the output, even though in simple Englisj we know that null is nothing. but here we tells JavaScript, that we are intentionally using null, as we wait for the real data to arrives, but remember that null, is a primitive data type.
+//null will be the output, even though in simple English we know that null is nothing. but here we tells JavaScript, that we are intentionally using null, as we wait for the real data to arrives, but remember that null, is a primitive data type.
+//NOTE: typeof null returns "object" which is a known JavaScript bug since 1995.
+//null is NOT an object, it is a primitive. Always use === null to check for null explicitly.
+//Example: if(value === null) not if(typeof value === "object")
