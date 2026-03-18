@@ -103,3 +103,97 @@ console.log(b);//null
 //NOTE: typeof null returns "object" which is a known JavaScript bug since 1995.
 //null is NOT an object, it is a primitive. Always use === null to check for null explicitly.
 //Example: if(value === null) not if(typeof value === "object")
+
+//operator: Are symbols used to perform operations on operands(values).
+//Operands- are values that operators does operations on. 
+// 5 + 3; (5, 3, these are operands). '+' it is the operators.
+//1.Arithmetic Operators- used to perform arithmetic operationss(+, -, *, / %)
+
+//2. Comparision Operators- Used to evaluate a relationship between two values and return boolean(true or false) based on the evaluation.(==, ===, <, >, <=, .+);
+//Difference between '==' and '==='
+//'==' it checks only values and allows type coercion while '===' checks the values and the type
+/* 
+console.log(5 == "5");//true
+console.log(5 === "5"); false. becasue the types are not the same, one is number and the other a string.
+*/
+//NOTES: Always use '===' Because it is  strict compared to '=='.
+// ==(known as loose equality operator) and ===(strict equlity operator, doesn't allow coercion).
+
+/*console.log(true && true);
+console.log(true && false);
+console.log(false && false);
+
+console.log(true || false);
+console.log(false || false);
+
+console.log(!true);
+console.log(!false);*/
+
+//Logical Operators: used to evaluate expression and return based on the truthiness.
+
+//1. AND(&&)- isa value selector based on truthiness and execution flow.
+//Always return the first falsy values encountered during left-to- right execution.
+//true && false;// false
+//true && true; //true
+//false && false;//
+
+//2. OR(||)- Used to return the first truthy values of the evaluation, or return last value when no truthy value is found.
+//"Hello" || 0; //Hello
+//"Hello" || "World"; Hello
+//indefine || null; null
+
+//COMBINING BOTH 'AND' & 'OR'
+
+//STEP 1: The Real Pattern I'll be encountering with:
+//let results = user && user.name;//this is called 'safe access pattern
+//it say if the user exist, then give me user.name(the name of the user).
+
+//How it is Actually Executed:
+ //The AND Rule: Always return the first falsy during th left- to- right evaluation, otherwise return the last value. 
+ //so in another word, it is like saying A && B
+
+ //CASE 1:
+/* let user = null;
+ let results = user && user.name;
+ console.log(results);
+ 
+ EXPLANATION: user has the value null, which is a falsy value. Thus it will be printed out, then exectuion stop. since it is the first falsy value.
+ */
+
+/*
+CASE 2: 
+let user = {name: "Essie"};
+let results = user && user.name;
+console.log(results);// Essie.
+
+EXPLANATION: The user is truthy, thus the actual value will be printed pout.
+*/
+ //STEP 2: WHERE BEGINNERS GET CONFUSED AND STUCK:
+// let results = user && user.name && user.name.lenght.
+//Meaning that if the user and the user.name exist the give me the length.
+
+// CASE 3:
+/*let user = {name:""};
+let results= user && user.name && user.length;
+console.log(results)
+
+OUTPUT CAN BE: 0 , "", undefined- this is the logic error not the sysntax error
+
+EXPLANATION: user it truthy, user.name=""(falsy), thus length won't be printed out.
+*/
+
+/*let user = {name: "John"};
+let result = user && user.name && user.age;
+console.log(result); */
+
+//REAL-WORLD TRAP:
+//let result = user && user.name || "Guest"
+
+/*let user={name: ""};
+let result = user && user.name || "Guest";
+
+EXPLANATION: We first evaluate user && user.name, because '&&' has high precedence. user = truthy, chain continues, user.name = "", empty string is falsy value, so the chain stops and returns "". 
+Next evaluate ("" || "Guest");
+""- falsy value so we move to right, "Guest" truthy value, in OR, it alwyas return first truthy value. thus the output will be "Guest".
+
+*/
