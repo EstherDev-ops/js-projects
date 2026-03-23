@@ -197,3 +197,71 @@ Next evaluate ("" || "Guest");
 ""- falsy value so we move to right, "Guest" truthy value, in OR, it alwyas return first truthy value. thus the output will be "Guest".
 
 */
+
+/*CONDITIONAL STATEMENTS AND TERNARY OPERATOR:
+
+//Conditiona Statements- Are statements that run a code besed whether something is truthy or  falsy.
+
+1.'if' statement
+if(condition){
+//run if the condition is true
+}
+EXAMPLE:
+let user = {name: "Esther"}
+if(user){
+console.log("User Exists");// truthy so it will run.
+}
+*/
+
+/*let user = "";//user is falsy, since we have empty string.
+if(user){
+   console.log("User Exists!");//will run if the first statement is truthy.
+}else{
+   console.log("User doesn't exists!");//else will run if the first statement is falsy. 
+}*/
+
+//else if- used when there are multiple conditions.
+
+/*let score = 70;
+
+if(score > 80){
+   console.log("A");
+}else if(score > 60){
+   console.log("B");
+}else{
+   console.log("C")
+}*/
+
+//TERNARY OPERATOR:-used as a short form of writing if...else
+//SYNTAX: condition ? valueIfTrue : valueIfFalse
+
+//EXAMPLE: 
+/*let isLoggedIn = true;
+let page = isLoggedIn ? "Dashboard": "login";
+console.log(isLoggedIn)*/
+/*let items = [];
+
+if (items) {
+  console.log ("Has items");
+} else {
+  console.log("Empty");
+}*/
+
+ /*let score = 75;
+ if(score >= 95){
+   console.log("A");
+ }
+ else if(score >=85){
+   console.log('B');
+ }
+ else if(score === 75){
+   console.log('C');
+ }
+else{
+   console.log("F");
+}*/
+
+/*let isLoggedIn = true;
+let message = isLoggedIn ? "Welcome back" : "Please log in";
+console.log(message)
+*/
