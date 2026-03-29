@@ -2,9 +2,9 @@
 
 //Esther Maina
 
-const name = "Esther";
+//const name = "Esther";
 //creating new variables, where it can store two numbers. firstNumber and secondNumber.
-let firstNumber = 0;
+/*let firstNumber = 0;
 let secondNumber=0;
 let result = 0;
 let operator = "";

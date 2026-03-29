@@ -263,5 +263,165 @@ else{
 
 /*let isLoggedIn = true;
 let message = isLoggedIn ? "Welcome back" : "Please log in";
-console.log(message)
+console.log(message)*/
+
+/* 
+LOOPS
+
+Looping- is the repetition of code as long as the condition is true.
+ -for loop
+ -while loop
+ for...of loop
+
+ For loop- is useful when I want to control the initilization, conditon and update of the loop all in one place.
+ EXAMPLE: when I want to access the index, like comparing  the current item with the next one in an array. 
+
+ syntax: for(initilization; condition; update){...}
+
+ for(let i =0; i < 5; i++){
+   console.log(i);
+}// output: 0, 1, 2, 3, 4
+
+
+CONTROL FLOWS INSIDE LOOPS:
+
 */
+/*for(let i =0; i < 5; i++){
+   if(i === 3){
+      break;
+   }
+   console.log(i);//0,1,2,3
+}
+
+for(let i = 0; i < 5; i++){
+   if(i === 3){
+      continue;
+   }
+   console.log(i);//0,1,2,,4
+
+   BREAK: Exist the entire loop, so no iteration takes place.
+   CONTINUE: skips the current iteration and moves to the next.
+}*/
+
+//Find the first even number
+/*for(let i = 1; i < 10; i++){
+   if(i % 2 === 0){
+      console.log("First even number: " + i);
+      break;
+   }
+}// runs only when the condition is true.
+
+
+for (let i = 1; i < 10; i++) {
+  if (i % 2 === 0) {
+    break;
+  }
+  console.log("First even number: " + i);// Runs for every iteration that doesn't hit break.
+}
+
+//Print only even numbers
+
+for(let i = 0; i < 10; i++){
+   if(i % 2 != 0){
+      continue;
+   }
+   console.log(i)
+}
+*/
+
+/*for(let i = 1; i <= 20; i++ ){
+   if(i % 3 === 0 && i % 5 === 0){
+      console.log(i);
+   }
+    
+}*/
+//Loop  through numbers from 1 to 100. Prin numbers but skip any numbers divisible by 7.
+/*for(let i = 1; i <= 100; i++){
+   if(i % 7 === 0){
+      continue;
+   }
+   console.log(i)
+}
+
+//Loop through through numbers from 1 to 100. Find the first number divisible by 13 and stop.
+ for(let i = 1; i <= 100; i++){
+   if(i % 13 === 0){
+      console.log(i);
+      break;
+   }
+
+
+ }
+
+ //STRATEGY TO USE:
+
+ DO I STOP EARLY- USE break
+ DO I SKIP ANY ITERATION- USE continue
+ DO I PROCESS EVERYTHING- NEITHER.
+ 
+ WHILE LOOP- It is useful when I don't know how many times my loop should run in advance and also the code will run repeteadly as long as the condition in true.
+
+ Example: when am checking something, like an API status over and over until I get the expected result.
+
+ EXAMPLE:
+ let i = 0;
+ while(i < 5){
+    console.log(i);
+    i++;
+ }
+
+  let isGameOver = false;
+ let lives = 3;
+
+ while(isGameOver === false){
+   console.log("Game running... lives " + lives);
+   lives --;
+
+   if(lives === 0){
+      isGameOver = true;
+   }
+ }
+ console.log("Game over");
+
+
+ for..of- used to iterate over iterable objects such as arrays or string and return each value directly.
+ iterable- is any object that can be looped over.
+
+ let fruits=['appl', 'banana', 'mango', 'orange'];
+
+ for(let fruit of fruits){
+ console.log(fruit)
+ }// For each fruit IN fruits print it.
+
+
+ For..in: it enumarates an object's propertie and returns keys/indexes
+ 
+let fruits = ['apples', 'mangos','banana','oranges']
+//for(let i = 0; i < fruits.length; i++){
+   //console.log(fruits[i]);
+   //console.log(i);
+//}
+
+for(let fruit in fruits){
+   console.log(fruit);
+}
+*/
+//NOTR: While loop- used when  my loop depends on a condition that keeps changing and I don't know  the upfronts of my loop in advance.
+//For loop- I will use when I want structured control over where my loop starts, where it ends, and how it updates after every iteration.
+
+/*
+Accumulator pattern- used to aggregate values pver time, as iteration progresses through a collection of data. 
+let prices = [9.99, 24.99, 4.99, 14.99,39.99];
+let total = 0;
+
+for(let price of prices){
+   total += price;
+   console.log(`Added: ${price} - Running total: ${total}`);
+}
+console.log(total);*/
+/*let results = 0.1 + 0.2;
+console.log(parseFloat(results.toFixed(2)));
+toFixed() method- used to round of the result to a specific number of decimal, it returns a string so we use parseFloat() to convert it back to a number.
+*/
+
+
