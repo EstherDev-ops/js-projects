@@ -424,4 +424,31 @@ console.log(parseFloat(results.toFixed(2)));
 toFixed() method- used to round of the result to a specific number of decimal, it returns a string so we use parseFloat() to convert it back to a number.
 */
 
+/*REAL WORLD PATTERN:
+
+Pattern 1: Find one item in a list-we used break
+Pattern 2: Filter- collect items that match the collection criteria, we use continue.
+Pattern 3: Transform- change  every item in the list. we netheir use break nor continue, since we want to process everything.
+
+let transactions = [
+  { type: "send", amount: 500 },
+  { type: "receive", amount: 1000 },
+  { type: "send", amount: 200 },
+  { type: "receive", amount: 3000 },
+  { type: "send", amount: 150 },
+];
+
+// accumulator pattern
+let total = 0;
+
+// filter pattern
+for(let transaction of transactions){
+    if(transaction.type !== "send"){
+        continue; // skip non-send transactions
+    }
+    total += transaction.amount; // accumulate sends only
+}
+
+console.log("Total sent: " + total);
+*/
 
