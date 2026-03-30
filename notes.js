@@ -440,7 +440,6 @@ let transactions = [
 
 // accumulator pattern
 let total = 0;
-
 // filter pattern
 for(let transaction of transactions){
     if(transaction.type !== "send"){
@@ -452,3 +451,133 @@ for(let transaction of transactions){
 console.log("Total sent: " + total);
 */
 
+//INTERVIEW QUESTIONS:
+//1. Given an array of numbers, return the sum of positive numbers only.
+/*
+STE 1: IDENTIFY KEYWORDS USED:
+array of numbers-loop through the array
+sum-accumulator pattern.
+ only psitive number-filter out negative numbers.
+ only-continue
+
+ STEP 2: Translate the code structure:
+ let total =0;
+ for(let number of numbers){
+ if(number <= 0){
+ continue;
+ }
+ total += number
+ }
+
+ STEP 3: TEST IT WITH REAL DATA:
+ let numbers = [10, -5, 20, -3, 15, -8, 5];
+let total =0;
+
+for(let number of numbers){
+   if(number <= 0){
+      continue;
+   }
+   total += number;
+}
+console.log(`Sum of the positive numbers: ${total}`)
+
+Questions 2: Given an array of names, return the firrst name that start with letter "J". 
+
+let names=["Esther", "Mary", "Jane", "John", "Grace"];
+
+for(let name of names){
+if(name.startWith('J)){
+console.log(`Found: ${name});
+break
+}
+}
+*/ 
+
+/*let names=["Esther", "Mary",  "Grace"];
+
+for(let name of names){
+if(name.startsWith('J')){
+console.log(`Found: ${name}`);
+break
+}
+}
+*/
+
+//Another version that is used to check  a defensive mechanism, where output will not be available.
+/*let names = ["Esther", "Mary", "Grace"];
+let found = null;
+
+for (let name of names) {
+  if (name.startsWith("J")) {
+    found = name;
+    break;
+  }
+}
+
+if (found !== null) {
+  console.log(`Found: ${found}`);
+} else {
+  console.log("No name starting with J found");
+}
+*/
+
+/* Given an array of students scores, print how many students passed and how many failed.Pass mark is 50.
+let scores = [45, 78, 32, 90, 55, 48, 61, 29, 88, 41];
+let passed = 0;
+let failed = 0;
+
+for(let score of scores){
+    if(score >= 50){
+        passed++;
+    } else {
+        failed++;
+    }
+}
+
+console.log(`Passed: ${passed}`);
+console.log(`Failed: ${failed}`);
+```
+
+**Step 4 — Verify manually:**
+```
+45 → fail  → failed = 1
+78 → pass  → passed = 1
+32 → fail  → failed = 2
+90 → pass  → passed = 2
+55 → pass  → passed = 3
+48 → fail  → failed = 3
+61 → pass  → passed = 4
+29 → fail  → failed = 4
+88 → pass  → passed = 5
+41 → fail  → failed = 5
+```
+
+Output:
+```
+Passed: 5
+Failed: 5
+*/
+
+
+/*let products = [
+  { name: "Laptop", price: 85000, inStock: true },
+  { name: "Phone", price: 45000, inStock: false },
+  { name: "Tablet", price: 32000, inStock: true },
+  { name: "Charger", price: 2500, inStock: true },
+  { name: "Headphones", price: 8500, inStock: false },
+  { name: "Mouse", price: 1500, inStock: true },
+];
+
+let totalValue = 0;
+for(let product of products){
+   if(!product.inStock){
+      continue;
+       }
+       console.log(`${product.name}: KES ${product.price}`);
+      totalValue += product.price;
+}
+console.log(`Total value of in-stock products: ${totalValue}`);
+
+/*
+DECOMPOSITION OF THE QUESTION
+Am looping product through array of products.  am checking if the product is in instock print out and calculates their total value.  if the condition is true, then instock items will be printed out. If the condition is false, then items out of stock will be skipped or filtered out.  No, am filtering out the products out of stock*/
