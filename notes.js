@@ -580,4 +580,84 @@ console.log(`Total value of in-stock products: ${totalValue}`);
 
 /*
 DECOMPOSITION OF THE QUESTION
-Am looping product through array of products.  am checking if the product is in instock print out and calculates their total value.  if the condition is true, then instock items will be printed out. If the condition is false, then items out of stock will be skipped or filtered out.  No, am filtering out the products out of stock*/
+-Am looping product through array of products. 
+ -am checking if the product is in instock print out and calculates their total value.  -if the condition is true, then instock items will be printed out. 
+ -If the condition is false, then items out of stock will be skipped or filtered out.  -No, am filtering out the products out of stock*/
+
+/*let celsius = [0, 15, 22, 37, 100];
+ let highest = 0;
+for(let temperature of celsius){
+   let fahrenheit = (temperature * 9/5 ) +32;
+   console.log(`${temperature} celcius  is equal to ${fahrenheit}`);
+    if(fahrenheit > highest ){
+      highest = fahrenheit;
+   }
+}  
+console.log(`Highest Fahrenheit temperature: ${highest}`);
+/*Loop through array of temperatures in Celcius.
+Convert each temperature from celcius to fahreinheit using this formular F = (C * 9/5) +32.
+printing out each fahreinheit temperature after conversion.
+/checking the output of each conversion fahreinheit temperature then compare it with the current highest temperature, if the current temeprature is higher than the current highest, update, the highest temperature with the current temperature.
+*/
+
+/*let students = [
+  { name: "Esther", score: 85 },
+  { name: "Jane", score: 42 },
+  { name: "John", score: 78 },
+  { name: "Mary", score: 91 },
+  { name: "Peter", score: 55 },
+  { name: "Grace", score: 67 },
+];
+let totalScore = 0;
+let averageScore = 0;
+for(let student of students){
+   totalScore += student.score;
+} 
+averageScore = totalScore / students.length;
+
+for(let student of students){
+   
+  if( student.score > averageScore){
+   console.log(`Student Name: ${student.name}`);
+  }
+   
+}*/
+/*let transactions = [
+    { name: "Esther", amount: 5000 },
+    { name: "Jane", amount: 12000 },
+    { name: "John", amount: 8500 },
+    { name: "Mary", amount: 25000 },
+    { name: "Peter", amount: 3200 }
+];
+
+let largestAmount = 0;
+let largestName = "";
+
+for(let transaction of transactions){
+    if(transaction.amount > largestAmount){
+        largestAmount = transaction.amount;
+        largestName = transaction.name;
+    }
+}
+
+console.log(`Largest transaction: ${largestName} — KES ${largestAmount}`);
+*/
+/*let products = [
+  { name: "Laptop", price: 85000 },
+  { name: "Phone", price: 45000 },
+  { name: "Tablet", price: 32000 },
+  { name: "Charger", price: 2500 },
+  { name: "Mouse", price: 1500 },
+];
+let cheapestPrice = 0;
+let cheapestName ="";
+
+for(let product of products){
+   if(cheapestPrice === 0 || product.price < cheapestPrice){
+      cheapestPrice = product.price;
+    cheapestName = product.name;
+      
+   }
+}
+console.log(`Cheapest product: ${cheapestName} - KES ${cheapestPrice}`);
+*/
